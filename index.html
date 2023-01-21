@@ -1,14 +1,37 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Rick Roll</title>
+    <style>
+      /* CSS styles for game elements */
+      #game {
+        width: 500px;
+        height: 500px;
+        background-color: #ccc;
+        position: relative;
+      }
+      #player {
+        width: 50px;
+        height: 50px;
+        background-color: #f00;
+        position: absolute;
+      }
+    </style>
   </head>
   <body>
-    <h1>You've been Rick Rolled!</h1>
+    <div id="game">
+      <div id="player"></div>
+    </div>
     <script>
-      setTimeout(function(){
-        window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
-      }, 5000);
+      // JavaScript code for game logic
+      var player = document.getElementById("player");
+      var game = document.getElementById("game");
+      
+      // Move player to the right on arrow key press
+      document.onkeydown = function(event) {
+        if (event.keyCode == 39) {
+          player.style.left = parseInt(player.style.left) + 10 + "px";
+        }
+      };
     </script>
   </body>
 </html>
