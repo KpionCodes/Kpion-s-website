@@ -57,6 +57,9 @@
 				return;
 			}
 
+			// Divide the time by 100 to convert from centiseconds to seconds
+			time /= 100;
+
 			if (personalBest === null || time < personalBest) {
 				personalBest = time;
 				document.getElementById("personal-best").innerHTML = "Personal Best: " + formatTime(personalBest);
