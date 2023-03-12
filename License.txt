@@ -1,0 +1,15 @@
+MIT License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+Permissions
+Commercial use
+Modification
+Distribution
+Private use
+Limitations
+Liability
+Warranty
+Conditions
+Include the above copyright notice and license in all copies or substantial portions of the Software.
+Disclaimer
+This software is provided as is and without any warranty or liability. The user assumes all responsibility for any damages or losses caused by the use of this software.
