@@ -1,0 +1,90 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+#container {
+  margin: 0 auto;
+  width: 80%;
+  max-width: 800px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+label {
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+input[type="number"] {
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100px;
+}
+
+#scramble {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+#personal-best {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+#scramble-history {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+#scramble-history br {
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  #container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  #scramble {
+    font-size: 20px;
+  }
+
+  #personal-best {
+    font-size: 16px;
+  }
+
+  #scramble-history {
+    font-size: 16px;
+  }
+
+  input[type="number"] {
+    width: 70px;
+  }
+}
