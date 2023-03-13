@@ -2,8 +2,8 @@
 <html>
 <head>
 	<title>Rubik's cube Timer</title>
-	<link rel="stylesheet" href="style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
 </head>
 <body onload="generateScramble()">
 	<button onclick="generateScramble()">New Scramble</button>
@@ -11,6 +11,8 @@
 	<label for="time-input">Enter your time:</label>
 	<input type="number" id="time-input" onkeydown="if (event.keyCode === 13) saveTime()">
 	<p id="last-5-average">Last 5 Average: N/A</p>
+	<p id="last-10-average">Last 10 Average: N/A</p>
+	<p id="last-15-average">Last 15 Average: N/A</p>
 	<p id="personal-best">Personal Best: N/A</p>
 	<p id="time-history">Time History:</p>
 	
@@ -69,6 +71,28 @@
 			}
 		}
 
+		function getLast10Average() {
+			if (timeHistory.length >= 10) {
+				var last10 = timeHistory.slice(-10);
+				var sum = last10.reduce((a, b) => a + b, 0);
+				var average = sum / 10;
+				return average;
+			} else {
+				return null;
+			}
+		}
+
+		function getLast15Average() {
+			if (timeHistory.length >= 15) {
+				var last15 = timeHistory.slice(-15);
+				var sum = last15.reduce((a, b) => a + b, 0);
+				var average = sum / 15;
+				return average;
+			} else {
+				return null;
+			}
+		}
+
 		function updateTimeHistory() {
 			var timeHistoryElement = document.getElementById("time-history");
 			timeHistoryElement.innerHTML = "Time History:";
@@ -76,6 +100,14 @@
 				timeHistoryElement.innerHTML += "<br>" + formatTime(timeHistory[i]) + " (" + scrambleHistory[i] + ")";
 			}
 			updateLast5Average();
+			var last10Average = getLast10Average();
+			var last15Average = getLast15Average();
+			if (last10Average !== null) {
+				document.getElementById("last-10-average").innerHTML = "Last 10 Average: " + formatTime(last10Average);
+			}
+			if (last15Average !== null) {
+				document.getElementById("last-15-average").innerHTML = "Last 15 Average: " + formatTime(last15Average);
+			}
 		}
 
 		function updateLast5Average() {
