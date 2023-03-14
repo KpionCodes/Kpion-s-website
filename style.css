@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
+  background-color: #f1c232;
 }
 
 h1 {
@@ -81,11 +81,11 @@ input[type="number"] {
   }
 
   #personal-best {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   #scramble-history {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   input[type="number"] {
